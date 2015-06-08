@@ -1,4 +1,0 @@
-Waiting...
-<?php
-echo 'xx';
-?>
