@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>For YWY</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>你的浏览器暂时不支持此页面特效，升下级。</p>
+</div>
+<div id="impress">
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>I have no idea what time can meet you again.So just make it.</q>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>No matter what your answer is,just want you know my love now.<br>And keep it,because my feeling is not your business until you love me too.(*^__^*)</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>自己以前害怕不敢的事，其实最后决定的人是你，不是我。所以不管那么多了，就告白，最后决定反正是你^_^</q>
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">I missed a lot of things</span>
+        <h1>about you</h1>    
+        <span class="footnote">Now,what's it gonna be?</span>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>When i miss<b>You</b>I enjoy imgae it.Y(^o^)Y</p>
+    </div>
+
+  <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>有时<b class="positioning">想你</b>, <b class="rotating">不是因为</b> 什么 <b class="scaling">就是心里有个</b>寄托。</p>
+    </div>
+
+
+ <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>Maybe<strong> your mind is very complex now.</strong> <br/>
+         I won't push you,that thought is a good news.<br/>
+       You can <strong>take it easy.</strong></p>
+    </div>
+
+  <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>If you have any question,<b>don't hesitate to ask me.</b></p>
+    </div>
+
+    <div class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>Whatever the result,</p>
+        <q>there will be a new life.</q>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>你也可以把这<b>当做</b>我对你的<b class="imagination">春节祝福^O^ </b></p>
+    </div>
+
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>one more thing...</p>
+    </div>
+
+
+    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">i</span> <span class="you">hope</span> <span class="noticed">you</span> <span class="its">like</span> <span class="in">it</span> <b>and</b></p>
+        <span class="footnote">happiness.</span>
+    </div>
+
+   
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>先任意点击下，后按空格键或方向键继续</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
