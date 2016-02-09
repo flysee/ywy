@@ -31,7 +31,7 @@
 <body>
 	<div class="slide_Box_mt"></div>
 
-	<button class="sparkley" onclick="javascript:window.location.href='love.html'">These are all for you!</button>
+	<button class="sparkley" onclick="y()">These are all for you!</button>
 
 </body>
 </html>
@@ -83,6 +83,17 @@ function Jump(){
 		});
 	});
 }
+
+ function y () {
+ 	var xmlhttp;
+ 	 xmlhttp=new XMLHttpRequest();
+	 var s="YWY";
+	 var b="She click yes."
+	 var url="http://oldself.com/email/who.php?subject="+s+"&body="+b;
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+	window.location.href='love.html'
+	}
 </script>
 <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 <script src="js/index.js"></script>
