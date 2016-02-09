@@ -41,6 +41,12 @@ var parts = 100;										//切割数量
 var imgIndex = 0;										//当前图片
 
 $(function(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+        document.write("<h1>电脑浏览更佳！</h1>");
+        return false;
+    } 
+
 	var op = {
 				width_mt : 523,							//外框容器宽度.(与图片宽度一致)
 				height_mt: 425,							//外框容器高度.(与图片高度一致)
