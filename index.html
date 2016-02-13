@@ -1,115 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>For YWY</title>
-
-	<style type="text/css">
-	body{ text-align:center; background-color:#000;}
-	.slide_Box_mt{ margin:0 auto; width:523px; height:425px;}
-	p span{ color:#fff; line-height:150%; font-family:Verdana,"微软雅黑","宋体"}
-	.sparkley {
-		background: #3e5771;
-		color: white;
-		border: none;
-		padding: 16px 36px;
-		font-weight: normal;
-		border-radius: 3px;
-		transition: all 0.25s ease;
-		box-shadow: 0 38px 32px -23px black;
-		margin: 0 1em 1em;
-	}
-	.sparkley:hover {
-		background: #2c3e50;
-		color: rgba(255, 255, 255, 0.2);
-		cursor: pointer;
-	}
-	</style>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<meta charset="utf-8"/>
+	<title>YWY</title>
 </head>
-
 <body>
-	<div class="slide_Box_mt"></div>
-
-	<button class="sparkley" onclick="y()">These are all for you!</button>
-
-</body>
-</html>
-
-<script>
-var parts = 100;										//切割数量
-var imgIndex = 0;										//当前图片
-
-$(function(){
-	
-	//referrer
-    var c=document.referrer;
-	var xmlref;
- 	xmlref=new XMLHttpRequest();
- 	var url="http://oldself.com/email/who.php?subject=YWY&body="+c+"==";
- 	xmlref.open("GET",url,true);
-	xmlref.send();
-
-	// pc
-    var ua = navigator.userAgent.toLowerCase();
-    if(ua.match(/MicroMessenger/i)=="micromessenger") {
-        document.write("<h1>电脑浏览更佳！</h1>");
-        return false;
-    }
-
-	var op = {
-				width_mt : 523,							//外框容器宽度.(与图片宽度一致)
-				height_mt: 425,							//外框容器高度.(与图片高度一致)
-				imgurl: 'images/6653149820121121163347025.jpg'				//默认图片.
-			};
-	var cut_w = op.width_mt/parts;				//小块宽度
-	var cut_h = op.height_mt;					//小块高度
-	var $this = $(".slide_Box_mt");
-	
-	
-	//设置小div进行图片切割.
-	for(var i=0;i<parts;i++){
-		var div1 = '<div class="scut_mt" style=" \
-		width:'+cut_w+'px; \
-		height:'+cut_h+'px; \
-		float:left;\
-		display:inline;\
-		background-image:url('+op.imgurl+');\
-		background-repeat:no-repeat; \
-		background-position:'+(-i*cut_w)+'px '+0+'px"\
-		></div>';
-		$this.append(div1);
-	}
-	$(".scut_mt").css({opacity:0});
-	
-	Jump();
-});
-
-function Jump(){
-	$(".scut_mt:eq("+imgIndex+")").animate({opacity:1},30,function(){
-		$(".scut_mt:eq("+imgIndex+")").animate({opacity:0.3},30,function(){
-			if(imgIndex<parts-1){
-				imgIndex++;
-				Jump();
-			}else{
-				imgIndex=0;	
-				$(".scut_mt").css({opacity:1});
-				// Jump();
-			}
-		});
-	});
-}
-
+		Are you YWY?
+		<input type="button"value="Yes"onclick="y()">
+		or
+		<input type="button"value="No"onclick="n()">
+<script type="text/javascript">
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+	else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
  function y () {
- 	var xmlhttp;
- 	 xmlhttp=new XMLHttpRequest();
 	 var s="YWY";
 	 var b="She click yes."
 	 var url="http://oldself.com/email/who.php?subject="+s+"&body="+b;
 	xmlhttp.open("GET",url,true);
 	xmlhttp.send();
-	window.location.href='love.html'
+	alert("Thanks!");
 	}
-</script>
-<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-<script src="js/index.js"></script>
+ function n () {
+        var s="YWY";
+		var b="She click no."
+		var url="http://oldself.com/email/who.php?subject="+s+"&body="+b;
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+alert("Thanks!");
+	}
+	</script>
+</body>
+</html>
